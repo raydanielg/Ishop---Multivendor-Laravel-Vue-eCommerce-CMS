@@ -1,0 +1,37 @@
+<!--
+<ion-header>
+	<ion-navbar>
+		
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+		<ion-title text-center>{{'sign_in' | translate}}</ion-title>
+	</ion-navbar>
+</ion-header>
+-->
+
+<ion-content>
+	<div class="banner">
+		<img src="assets/imgs/logo.png">
+	</div>
+	<div class="bg-white container"> 
+		<p text-center>{{'login_with_your_wordpress_credentials' | translate}}</p>
+
+		<div class="form ">
+			<ion-list no-lines>
+				<ion-item>
+					<ion-input type="text" placeholder="{{'enter_admin_username' | translate}}"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="{{'enter_admin_password' | translate}}"></ion-input>
+				</ion-item>
+			</ion-list>
+			<button ion-button block class="btn" (click)="home()">{{'sign_in' | translate}}</button>
+		</div>
+	</div>
+
+	<div class="bottom_section">
+		<img src="assets/imgs/sign_img.png">
+	</div>
+</ion-content>

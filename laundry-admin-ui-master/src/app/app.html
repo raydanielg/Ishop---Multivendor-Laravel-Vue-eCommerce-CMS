@@ -1,0 +1,102 @@
+<ion-menu *ngIf="rtlSide == 'left'" side="left" [content]="content" id="Menu">
+    <ion-header>
+        <ion-list no-lines>
+            <div class="background">
+                <img src="assets/imgs/profile.png">
+            </div>
+            <ion-item menuClose>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/profile.png">
+                </ion-avatar>
+                <h2  class="text-white">Sam Smith</h2>
+<!--                <p  class="text-theme">{{'view_profile' | translate}}</p>-->
+            </ion-item>
+        </ion-list>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines class="menu-item">
+            <ion-item menuClose (click)=home()>
+                <ion-icon class="material-icons text-theme" item-start text-start>desktop_mac</ion-icon>
+                <h2 class="">{{'dashboard' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="orders()">
+                <ion-icon class="material-icons text-theme" item-start text-start>storage</ion-icon>
+                <h2 class="">{{'orders' | translate}}</h2>
+            </ion-item>  
+			<ion-item menuClose (click)="messages()">
+                <ion-icon class="material-icons text-theme" item-start text-start>question_answer</ion-icon>
+                <h2 class="">{{'messages' | translate}}</h2>
+            </ion-item>  
+            <ion-item menuClose (click)="chooseLanguage()">
+				<ion-icon class="text-theme" style="text-align: start;" name="md-globe" item-start></ion-icon>
+				<h2 class="">{{'change_language' | translate}}</h2>
+			</ion-item>
+            <ion-item menuClose (click)="signin()">
+                <ion-icon class="material-icons text-theme" item-start text-start>power_settings_new</ion-icon>
+                <h2 class="">{{'logout' | translate}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer *ngIf="config.demoMode">
+		<ion-item menuClose (click)="developedBy()" no-lines>
+			<div class="div-logo">
+				<h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+				<img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+			</div>
+		</ion-item>
+	  </ion-footer>
+</ion-menu>
+
+<ion-menu *ngIf="rtlSide == 'right'" side="right" [content]="content" id="Menu">
+    <ion-header>
+        <ion-list no-lines>
+            <div class="background">
+                <img src="assets/imgs/profile.png">
+            </div>
+            <ion-item menuClose>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/profile.png">
+                </ion-avatar>
+                <h2  class="text-white">Sam Smith</h2>
+<!--                <p  class="text-theme">{{'view_profile' | translate}}</p>-->
+            </ion-item>
+        </ion-list>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines class="menu-item">
+            <ion-item menuClose (click)=home()>
+                <ion-icon class="material-icons text-theme" item-start text-start>desktop_mac</ion-icon>
+                <h2 class="">{{'dashboard' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="orders()">
+                <ion-icon class="material-icons text-theme" item-start text-start>storage</ion-icon>
+                <h2 class="">{{'orders' | translate}}</h2>
+            </ion-item>  
+			<ion-item menuClose (click)="messages()">
+                <ion-icon class="material-icons text-theme" item-start text-start>question_answer</ion-icon>
+                <h2 class="">{{'messages' | translate}}</h2>
+            </ion-item>  
+            <ion-item menuClose (click)="chooseLanguage()">
+				<ion-icon class="text-theme" style="text-align: start;" name="md-globe" item-start></ion-icon>
+				<h2 class="">{{'change_language' | translate}}</h2>
+			</ion-item>
+            <ion-item menuClose (click)="signin()">
+                <ion-icon class="material-icons text-theme" item-start text-start>power_settings_new</ion-icon>
+                <h2 class="">{{'logout' | translate}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer *ngIf="config.demoMode">
+		<ion-item menuClose (click)="developedBy()" no-lines>
+			<div class="div-logo">
+				<h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+				<img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+			</div>
+		</ion-item>
+	  </ion-footer>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

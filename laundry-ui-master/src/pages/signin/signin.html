@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/logo.png" class="logo">
+    <h3 text-center>{{'Sign_in_now' | translate}}</h3>
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-icon name="md-mail" item-start></ion-icon>
+            <ion-label floating>{{'Email_or_Phone_Number' | translate}}</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-lock" item-start></ion-icon>
+            <ion-label floating>{{'Password' | translate}}</ion-label>
+            <ion-input type="password"></ion-input>
+            <h5 item-end (click)="password()">{{'Forgot' | translate}}</h5>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="tab()">{{'Sign_in' | translate}}</button>
+    <p text-center>{{'Oh_Not_Registered_yet' | translate}}</p>
+    <button ion-button outline block (click)="signup()">{{'Register_Now' | translate}}</button>
+</ion-content>

@@ -1,0 +1,148 @@
+<ion-header class="bg-white">
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>{{'orders' | translate}} UDL 2214 <span>20 Jun, 11:30am</span></ion-title>
+	</ion-navbar>
+	<div class="details d-flex">
+		<div class="text">
+			<h2 class="">Sam Smith</h2>
+			<p>104, walnut Street, Opp.Business Bank, City Park, illinois,USA</p>
+		</div>
+		<h2 class="end" text-end>$250.00</h2>
+	</div>
+	<ion-segment [(ngModel)]="orders">
+		<ion-segment-button value="ordered_items">
+			{{'ordered_items' | translate}}
+		</ion-segment-button>
+		<ion-segment-button value="customer_info">
+			{{'customer_info' | translate}}
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+<ion-content class="bg-color" [ngSwitch]="orders">
+	<div class="" *ngSwitchCase="'ordered_items'">
+		<ion-list no-lines>
+			<!--
+			<ion-list-header>
+				<ion-row>
+					<ion-col col-7>
+						<h3>{{'item_s' | translate}}</h3>
+					</ion-col>
+					<ion-col col text-center>
+						<h3>{{'qnt' | translate}}</h3>
+					</ion-col>
+					<ion-col col text-end>
+						<h3>{{'amount' | translate}}</h3>
+					</ion-col>
+				</ion-row>
+			</ion-list-header>
+-->
+
+			<ion-item class="items">
+				<ion-row>
+					<ion-col col-6>
+						<h3> 2 &nbsp;&nbsp;x&nbsp;&nbsp; Shirt (Man)</h3>
+					</ion-col>
+					<ion-col col-3>
+						<h4> Wash $ Iron</h4>
+					</ion-col>
+					<ion-col col-3 text-end>
+						<h3> $20</h3>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h3> 3 &nbsp;&nbsp;x&nbsp;&nbsp; Trouser (Man)</h3>
+					</ion-col>
+					<ion-col col-3>
+						<h4> Wash $ Iron</h4>
+					</ion-col>
+					<ion-col col-3 text-end>
+						<h3> $25</h3>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h3> 1 &nbsp;&nbsp;x&nbsp;&nbsp; Jeans (Man)</h3>
+					</ion-col>
+					<ion-col col-3>
+						<h4> Wash $ Iron</h4>
+					</ion-col>
+					<ion-col col-3 text-end>
+						<h3> $10</h3>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h3> 1 &nbsp;&nbsp;x&nbsp;&nbsp; T-shirt (Woman)</h3>
+					</ion-col>
+					<ion-col col-3>
+						<h4> Wash $ Iron</h4>
+					</ion-col>
+					<ion-col col-3 text-end>
+						<h3> $18</h3>
+					</ion-col>
+				</ion-row>
+			</ion-item>
+
+		</ion-list>
+		<div class="total">
+			<ion-row>
+				<ion-col col-8>
+					<h5 class="">{{'service_tex' | translate}} </h5>
+				</ion-col>
+				<ion-col col-4 text-end>
+					<h5 class="">$ 10.00</h5>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="bg-white">
+				<ion-col col-8>
+					<h5 class="">{{'amount_paid_via' | translate}} Credit Card</h5>
+				</ion-col>
+				<ion-col col-4>
+					<h5 class="text-theme" text-end>$250.00</h5>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>
+	<div class="customer_info" *ngSwitchCase="'customer_info'">
+		<ion-list no-lines>
+			<ion-item>
+				<h2>{{'phone_number' | translate}}</h2>
+				<p>+1 987 654 3210</p>
+			</ion-item>
+			<ion-item>
+				<h2>{{'email_address' | translate}}</h2>
+				<p>samsmith@mail.com</p>
+			</ion-item>
+			<ion-item>
+				<h2>{{'shipping_address' | translate}}</h2>
+				<p>104, walnut Street, Opp.Business Bank, City Park, illinois,USA</p>
+			</ion-item>
+			<ion-item>
+				<h2>{{'billing_address' | translate}}</h2>
+				<p>104, walnut Street, Opp.Business Bank, City Park, illinois,USA</p>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+<ion-footer>
+	<div class="container">
+		<h2 class="d-flex">
+			{{'order_status' | translate}}
+			<span class="end">
+				{{'pending' | translate}}
+			</span>
+		</h2>
+		<h2 class="d-flex">
+			{{'delivery_guy' | translate}}
+			<span class="end">
+				None
+			</span>
+		</h2>
+	</div>
+	<button ion-button full class="btn" (click)="update_order()">{{'confirm_order' | translate}}</button>
+</ion-footer>

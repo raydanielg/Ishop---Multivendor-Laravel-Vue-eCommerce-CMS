@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title></ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding-left padding-right>
+	<img src="assets/imgs/logo.png" class="logo">
+	<h3 text-center>{{"login" | translate}}</h3>
+	<ion-list no-lines class="form">
+		<ion-item>
+			<ion-icon name="md-globe" item-start text-start></ion-icon>
+			<ion-label floating>{{"select_country" | translate}}</ion-label>
+			<ion-select [(ngModel)]="countryCode" multiple="false" class="text-thime">
+				<ion-option value="1">Brazil</ion-option>
+				<ion-option value="2">India</ion-option>
+				<ion-option value="3">Ireland</ion-option>
+				<ion-option value="4">Japan</ion-option>
+				<ion-option value="5">Kenya</ion-option>
+				<ion-option value="6">Latvia</ion-option>
+				<ion-option value="7">Martinique</ion-option>
+				<ion-option value="8">Mexico</ion-option>
+				<ion-option value="9">Monaco</ion-option>
+				<ion-option value="10">Nepal</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-icon name="md-mail" item-start text-start></ion-icon>
+			<ion-label floating>{{"phone" | translate}}</ion-label>
+			<ion-input type="tel" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-icon name="md-lock" item-start text-start></ion-icon>
+			<ion-label floating>{{"password" | translate}}</ion-label>
+			<ion-input type="password"></ion-input>
+			<h5 item-end (click)="password()">{{"forgot" | translate}}</h5>
+		</ion-item>
+	</ion-list>
+	<button ion-button block class="btn" (click)="tabs()">{{"login" | translate}}</button>
+	<!-- <p text-center [innerHTML]="authError"></p> -->
+	<div class="fixed-bottom">
+		<p text-center>{{"not_registered" | translate}}</p>
+		<button ion-button outline block class="btn" (click)="signup()">{{"register_nw" | translate}}</button>
+	</div>
+</ion-content>

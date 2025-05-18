@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			{{"contact_us" | translate}}
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+	<ion-list no-lines>
+		<ion-item>
+			<p>{{"call_us" | translate}}</p>
+			<h2>+1 987 654 3210</h2>
+			<ion-avatar item-end>
+				<ion-icon name="md-call"></ion-icon>
+			</ion-avatar>
+		</ion-item>
+		<ion-item>
+			<p>{{"mail_us" | translate}}</p>
+			<h2>help@quickwash.com</h2>
+			<ion-avatar item-end>
+				<ion-icon name="md-mail"></ion-icon>
+			</ion-avatar>
+		</ion-item>
+		<ion-item>
+			<p> {{"reach_us" | translate}}</p>
+			<h2> QuickWash Tower <br> 1024, Old Church Street, <br>New York, USA</h2>
+
+			<ion-avatar item-end>
+				<ion-icon name="md-navigate"></ion-icon>
+			</ion-avatar>
+		</ion-item>
+	</ion-list>
+	<!--
+<div *ngIf="settings && settings.laundry_appconfig_address && settings.laundry_appconfig_address.length" class="map">
+    <ion-icon name="md-navigate" (click)="navigate()"></ion-icon>
+    <img src="assets/imgs/map-img.png">
+</div>
+-->
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{"more" | translate}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+	<div class="order-head">
+		<ion-row>
+			<ion-col col-4>
+				<div class="img_box center_img">
+					<img src="assets/imgs/face.png" class="crop_img">
+				</div>
+			</ion-col>
+			<ion-col>
+				<p>George Smith<span> +1 987 654 3210</span></p>
+			</ion-col>
+		</ion-row>
+	</div>
+	<ion-list no-lines>
+		<!-- <ion-item (click)="profile()">
+        <ion-icon name="md-person" item-start></ion-icon>
+        View Profile
+    </ion-item> -->
+		<ion-item (click)="contact()">
+			<ion-icon name="md-mail" item-start></ion-icon>
+			{{"contact_us" | translate}}
+		</ion-item>
+		<ion-item (click)="tnc()">
+			<ion-icon name="md-clipboard" item-start></ion-icon>
+			{{"tnc" | translate}}
+		</ion-item>
+		<ion-item (click)="chooseLanguage()">
+			<ion-icon name="md-globe" item-start></ion-icon>
+			{{"change_language" | translate}}
+		</ion-item>
+		<ion-item (click)="alertLogout()">
+			<ion-icon name="md-open" item-start></ion-icon>
+			{{"logout" | translate}}
+		</ion-item>
+	</ion-list>
+	<!--    <p text-center class="about">Opus labs Version 2.0.101</p>-->
+	<div class="logo" text-center padding>
+		<img src="assets/imgs/logo.png">
+	</div>
+</ion-content>
+<ion-footer *ngIf="config.demoMode" class="footer-class">
+    <ion-item class="item-branding-class" (click)="developedBy()" no-lines>
+        <div class="div-logo">
+            <h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+            <img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+        </div>
+    </ion-item>
+</ion-footer>

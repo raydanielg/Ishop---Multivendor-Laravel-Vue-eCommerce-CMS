@@ -1,0 +1,43 @@
+<!--
+<ion-header class="bg-white">
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-center>Items <span class="end"><ion-icon name="md-search" class="text-theme"></ion-icon></span></ion-title>
+    </ion-navbar>
+</ion-header>
+-->
+
+<ion-content class="">
+
+
+</ion-content>
+<ion-footer>
+    <ion-list no-lines radio-group>
+        <ion-list-header text-center>
+           {{'update_order_status' | translate}}
+        </ion-list-header> 
+        <ion-item (click)="dismiss()">
+            <ion-label text-center>{{'procesing' | translate}}</ion-label>
+            <ion-radio checked="true" value="Procesing"></ion-radio>
+        </ion-item>
+        <ion-item (click)="dismiss()">
+            <ion-label text-center>{{'on_hold' | translate}}</ion-label>
+            <ion-radio value="on_hold"></ion-radio>
+        </ion-item>
+        <ion-item (click)="dismiss()">
+            <ion-label text-center>{{'ready_to_deliver' | translate}}</ion-label>
+            <ion-radio value="ready_to_deliver"></ion-radio>
+        </ion-item>
+        <ion-item (click)="dismiss()">
+            <ion-label text-center>{{'completed' | translate}}</ion-label>
+            <ion-radio value="completed"></ion-radio>
+        </ion-item>
+        <ion-item (click)="dismiss()">
+            <ion-label text-center>{{'cancelled' | translate}}</ion-label>
+            <ion-radio value="cancelled"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <button ion-button block class="btn" (click)="dismiss()">{{'close' | translate}}</button>
+</ion-footer>

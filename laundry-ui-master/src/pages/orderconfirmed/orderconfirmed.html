@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'Review_Order' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div class="all-orders">
+        <p class="order-header">{{'Your_cloth' | translate}}<span>{{'Edit' | translate}}</span></p>
+        <ion-label>
+            <span class="items">2</span>
+            <span class="cross">x</span>
+            <span class="name">Shirt (Man)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$20</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">3</span>
+            <span class="cross">x</span>
+            <span class="name">Trouser (Man)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$25</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">1</span>
+            <span class="cross">x</span>
+            <span class="name">Jeans (Man)</span>
+            <span class="service">Wash & Fold</span>
+            <span class="amount">$10</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">2</span>
+            <span class="cross">x</span>
+            <span class="name">T-Shirt (Woman)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$18</span>
+        </ion-label>
+        <p class="add-more">{{'Add_more' | translate}}</p>
+    </div>
+    <div class="fixed-bottom">
+        <p class="promo-code">
+            <ion-icon name="md-pricetag"></ion-icon>{{'Have_Promocode' | translate}}
+        </p>
+        <div class="price-section">
+            <ion-label>{{'Sub_Total' | translate}}<span>$73</span></ion-label>
+            <ion-label>Tax<span>$5</span></ion-label>
+            <ion-label class="total-amount">{{'Payble_Amount' | translate}}<span>$78</span></ion-label>
+        </div>
+        <p (click)="selectaddress()" text-center class="btn">{{'Confirm_Order' | translate}}
+                <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+            </p>
+    </div>
+</ion-content>

@@ -1,0 +1,23 @@
+page-signin {
+	h3 {
+		margin: 0;
+		font-weight: 400;
+		padding-bottom: 8px;
+	}
+
+	.list {
+		margin-bottom: 26px;
+	}
+
+	.fixed-bottom {
+		padding-top: 47px;
+
+		p {
+			margin: 0;
+			color: lighten($text-dark, 30%);
+			font-size: 1.2rem;
+			font-weight: 500;
+			padding-bottom: 16px;
+		}
+	}
+}

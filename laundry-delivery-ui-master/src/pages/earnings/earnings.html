@@ -1,0 +1,568 @@
+<ion-header>
+	<ion-navbar>
+		<!--<ion-title>Earnings</ion-title>-->
+		<div class="banner">
+			<ion-item text-center>{{"earnings" | translate}}
+			</ion-item>
+			<h1 text-center>$ 168.50</h1>
+			<!-- <ion-item class="times">
+        <ion-select [(ngModel)]="times">
+          <ion-option value="d1">This Week</ion-option>
+          <ion-option value="d2">This Month</ion-option>
+        </ion-select>
+      </ion-item> -->
+		</div>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+	<!--
+	<div class="empty-view" *ngIf="(!orders || !orders.length)">
+		<div style="text-align:center">
+			<img src="assets/imgs/empty_earning.png" alt="no offers" />
+			<span style="color:#9E9E9E; font-weight:bold;">{{"9_earnings_8" | translate}}</span>
+		</div>
+	</div>
+-->
+	<ion-list no-lines>
+		<!--		<h3 class="heading">{{"4m_order" | translate}}</h3>-->
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+		
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+		
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+			<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 29.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 07.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 56.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 10.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+
+		<ion-item>
+			<ion-row>
+				<ion-col col-5>
+					<h2>{{"order_no" | translate}} 22145052</h2>
+					<p>{{"laundry_deliverd" | translate}}</p>
+				</ion-col>
+				<ion-col col-4 class="payment-type">
+					<h2>$ 35.00</h2>
+					<p>{{"total" | translate}}</p>
+				</ion-col>
+				<ion-col col-3 class="earned">
+					<h2>$ 08.00</h2>
+					<p>{{"earned" | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+	</ion-list>
+</ion-content>

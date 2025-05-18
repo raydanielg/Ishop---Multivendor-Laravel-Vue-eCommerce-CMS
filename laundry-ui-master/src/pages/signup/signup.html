@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'Register_Now' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-icon name="md-camera" class="cam-icon"></ion-icon>
+    <p text-center>{{'Add_Photo' | translate}}</p>
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-icon name="md-person" item-start></ion-icon>
+            <ion-label floating>{{'Enter_Full_Name' | translate}}</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-mail" item-start></ion-icon>
+            <ion-label floating>{{'Email_Address' | translate}}</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-phone-portrait" item-start></ion-icon>
+            <ion-label floating>{{'Phone_Number' | translate}}</ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-lock" item-start></ion-icon>
+            <ion-label floating>{{'Create_Password' | translate}}</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-lock" item-start></ion-icon>
+            <ion-label floating>{{'Confirm_Password' | translate}}</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="otp()">{{'Register_Now' | translate}}</button>
+</ion-content>

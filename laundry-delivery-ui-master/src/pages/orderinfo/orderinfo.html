@@ -1,0 +1,144 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{"order_no" | translate}} 22145052</ion-title>
+	</ion-navbar>
+	<ion-list class="details" no-lines>
+		<ion-item item-start>
+			<h2>{{"ordered_by" | translate}}<strong> Samantha Smith</strong>
+			</h2>
+			<ion-avatar item-end>
+				<ion-icon name="md-call"></ion-icon>
+			</ion-avatar>
+		</ion-item>
+		<ion-item item-start class="status">
+			<h2>
+				{{"ordered_status" | translate}}<strong> Ready to Deliver</strong>
+			</h2>
+			<ion-avatar item-end>
+				<img src="assets/imgs/pickedup.png">
+			</ion-avatar>
+		</ion-item>
+	</ion-list>
+	<ion-segment [(ngModel)]="tab">
+		<ion-segment-button value="order_info">
+			{{"order_nfo" | translate}}
+		</ion-segment-button>
+		<ion-segment-button value="cloth_list">
+			{{"cloth_list" | translate}}
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+
+<ion-content class="bg-light">
+	<div [ngSwitch]="tab" class="order-list">
+		<div *ngSwitchCase="'order_info'" no-lines class="order_info">
+			<div class="info">
+				<ion-row>
+					<ion-col col-6>
+						<p><small>{{"pickup_time" | translate}}</small></p>
+						<h2><strong> 21 June, 21:00</strong></h2>
+						<!-- <h2><strong>{{order.time_pickup_formatted_date}}<br>{{order.time_pickup_formatted_time}}</strong></h2>
+            <h4>{{order.time_pickup_slot}}</h4> -->
+					</ion-col>
+					<ion-col col-6>
+						<p><small>{{"deliver_time" | translate}}</small></p>
+						<h2><strong> 22 June, 20:20</strong></h2>
+						<!-- <h2><strong>{{order.time_delivery_formatted_date}}<br>{{order.time_delivery_formatted_time}}</strong></h2>
+            <h4>{{order.time_delivery_slot}}</h4> -->
+					</ion-col>
+				</ion-row>
+			</div>
+
+			<div class="address info">
+				<p style="margin-left: 20px;"><small>{{"address" | translate}}</small></p>
+				<ion-row>
+					<ion-col col-10>
+						<h2><strong>B11 Old Ford Street, Workshop towerLewisham, Sydney</strong></h2>
+					</ion-col>
+
+					<ion-col col-2 (click)="navigatePickup()">
+						<ion-icon name="ios-navigate-outline"></ion-icon>
+					</ion-col>
+				</ion-row>
+				<!-- <ion-row>
+          <p><small>{{"deliver_nfo"|translate}}</small></p>
+          <ion-col col-10>
+            <h2><strong>{{order.shipping.address_1}}</strong></h2>
+          </ion-col>
+
+          <ion-col col-2 (click)="navigateDelivery()">
+            <ion-icon name="ios-navigate-outline"></ion-icon>
+          </ion-col>
+        </ion-row> -->
+			</div>
+			<div class="info payment">
+				<p><small>{{"payment" | translate}}</small></p>
+				<ion-row>
+					<ion-col col-8>
+						<h2><strong>$ 78.00</strong>
+							<span>Cash on delivery</span>
+						</h2>
+					</ion-col>
+				</ion-row>
+				<button ion-button block margin-top class="btn">
+					View Billing
+				</button>
+			</div>
+		</div>
+		<div *ngSwitchCase="'cloth_list'" no-lines class="cloth_list">
+			<div class="receipt">
+				<ion-row>
+					<ion-col col-7>
+						<h2><strong>2<span>x</span> Shirt (Man)</strong></h2>
+					</ion-col>
+					<ion-col col-5>
+						<p><small>Wash & Iron</small> <strong>$20</strong></p>
+					</ion-col>
+				</ion-row>
+
+				<ion-row>
+					<ion-col col-7>
+						<h2><strong>3<span>x</span> Trouser (Man)</strong></h2>
+					</ion-col>
+					<ion-col col-5>
+						<p><small>Wash & Iron</small> <strong>$25</strong></p>
+					</ion-col>
+				</ion-row>
+
+				<ion-row>
+					<ion-col col-7>
+						<h2><strong>1<span>x</span>Jeans (Man)</strong></h2>
+					</ion-col>
+					<ion-col col-5>
+						<p><small>Wash & Iron</small> <strong>$10</strong></p>
+					</ion-col>
+				</ion-row>
+
+				<ion-row>
+					<ion-col col-7>
+						<h2><strong>2<span>x</span> T-Shirt (Woman)</strong></h2>
+					</ion-col>
+					<ion-col col-5>
+						<p><small>Wash & Iron</small> <strong>$18</strong></p>
+					</ion-col>
+				</ion-row>
+				<div class="total" padding-top>
+					<ion-row class="grend_total">
+						<ion-col col-6>
+							<h2><strong>Cash on Delivery</strong></h2>
+						</ion-col>
+						<ion-col col-6>
+							<p><strong>$78</strong></p>
+						</ion-col>
+					</ion-row>
+				</div>
+
+			</div>
+			<div class="fixed-bottom">
+				<button ion-button block class="btn">
+					Mark Delivered
+				</button>
+			</div>
+		</div>
+	</div>
+</ion-content>

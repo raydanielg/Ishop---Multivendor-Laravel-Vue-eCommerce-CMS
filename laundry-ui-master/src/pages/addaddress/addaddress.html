@@ -1,0 +1,105 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'My_address' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <p padding-left padding-right class="heading">{{'Click_on_icons_to_add_Address' | translate}}</p>
+    <ion-toolbar no-border-top class="select-tab">
+        <ion-segment [(ngModel)]="address">
+            <ion-segment-button value="home">
+                <span class="home-img"></span> {{'Home' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="office">
+                <span class="office-img"></span> {{'Office' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="other">
+                <span class="other-img"></span> {{'Other' | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+    <div [ngSwitch]="address" class="address-list">
+        <ion-list *ngSwitchCase="'home'" no-lines class="home-address">
+            <div class="input-address" padding>
+                <p class="heading" no-margin padding-bottom>{{'Enter_Home_Address_Details' | translate}}</p>
+                <ion-list no-line>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Building_Society_Name_Number' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Street_Address_Landmark_etc' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-row no-padding>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'Zip_Code' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'City' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-list>
+                <button ion-button full>{{'Save_Address' | translate}}</button>
+            </div>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'office'" no-lines class="office-address">
+            <div class="input-address" padding>
+                <p class="heading" no-margin padding-bottom>{{'Enter_Office_Address_Details' | translate}}</p>
+                <ion-list no-line>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Building_Society_Name_Number' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Street_Address_Landmark_etc' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-row no-padding>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'Zip_Code' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'City' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-list>
+                <button ion-button full>{{'Save_Address' | translate}}</button>
+            </div>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'other'" no-lines class="other-address">
+            <div class="input-address" padding>
+                <p class="heading" no-margin padding-bottom>{{'Enter_Other_Address_Details' | translate}}</p>
+                <ion-list no-line>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Building_Society_Name_Number' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input type="text" placeholder="{{'Street_Address_Landmark_etc' | translate}}"></ion-input>
+                    </ion-item>
+                    <ion-row no-padding>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'Zip_Code' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col no-padding>
+                            <ion-item>
+                                <ion-input type="text" placeholder="{{'City' | translate}}"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-list>
+                <button ion-button full>{{'Save_Address' | translate}}</button>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

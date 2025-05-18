@@ -1,0 +1,144 @@
+page-chats {
+	.chat_container {
+		padding: 13px 13px;
+		flex-wrap: wrap;
+
+		.chat_box {
+			width: auto !important;
+			margin-bottom: 13px;
+			min-width: 70%;
+			align-items: flex-start;
+
+			.chat {
+				min-width: 90px;
+				max-width: 300%;
+				min-width: 200px;
+				//				box-shadow: 0 19px 14px -8px rgba(0, 0, 0, 0.1);
+				padding: 11px 11px;
+
+				h2 {
+					margin: 0;
+					font-size: 1.55rem;
+					line-height: 18px;
+					padding-bottom: 5px;
+				}
+			}
+
+			p {
+				margin: 0;
+				font-size: 1.1rem;
+				font-weight: 400;
+				padding-top: 3px;
+			}
+
+			&.received {
+				.chat {
+					background: $white;
+					border-radius: 10px 10px 10px 0;
+
+					p {
+						color: lighten($gray, 15%);
+					}
+				}
+			}
+
+			&.send {
+				margin-left: auto;
+				margin-right: 0;
+
+				.chat {
+					background: $theme-color;
+					margin-left: auto;
+					margin-right: 0;
+					color: $white;
+					border-radius: 10px 10px 0px 10px;
+					text-align: right;
+
+					h2 {
+						//						text-align: right;
+						font-weight: 400;
+
+					}
+
+					p {
+						//						text-align: right;
+						opacity: .7;
+					}
+				}
+			}
+		}
+	}
+
+
+	ion-footer {
+		background: $white;
+
+		.form {
+			margin: 0;
+			width: 100%;
+			padding: 0;
+
+			ion-list {
+				padding: 0 !important;
+				margin: 0;
+
+				.item {
+					border: none !important;
+					background: none;
+					margin: 0;
+					align-items: center;
+					padding: 3px 17px !important;
+
+					.item-inner {
+
+						ion-input {
+
+							.text-input {
+								font-size: 1.65rem;
+									color: darken($gray, 100%);
+							}
+
+							::-webkit-input-placeholder {
+								color: lighten($gray, 20%);
+								font-weight: 500;
+								font-size: 1.65rem;
+								letter-spacing: .5px;
+							}
+
+							::-moz-placeholder {
+								color: lighten($gray, 20%);
+								font-weight: 500;
+								font-size: 1.65rem;
+								letter-spacing: .5px;
+							}
+
+							:-ms-input-placeholder {
+								color: lighten($gray, 20%);
+								font-weight: 500;
+								font-size: 1.65rem;
+								letter-spacing: .5px;
+							}
+
+							:-moz-placeholder {
+								color: lighten($gray, 20%);
+								font-weight: 500;
+								font-size: 1.65rem;
+								letter-spacing: .5px;
+							}
+
+						}
+					}
+				}
+
+				ion-icon {
+					&[item-end] {
+						margin: 0;
+						background:$theme-color;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}

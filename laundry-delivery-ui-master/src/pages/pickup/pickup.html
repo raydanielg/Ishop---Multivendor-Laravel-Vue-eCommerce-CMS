@@ -1,0 +1,1851 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{"picked_up_delivery" | translate}}</ion-title>
+	</ion-navbar>
+	<ion-segment [(ngModel)]="tab">
+		<ion-segment-button value="assigned">
+			{{"assigned" | translate}}
+		</ion-segment-button>
+		<ion-segment-button value="completed">
+			{{"completed" | translate}}
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+
+<ion-content class="bg-light">
+	<div class="order-list" [ngSwitch]="tab">
+		<ion-list no-lines padding-top *ngSwitchCase="'assigned'">
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+				<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/confirmed.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to delivery
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Delivery
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/pickedup.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Ready to Pick up
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn" padding-bottom>
+								Mark Picked up
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+		</ion-list>
+
+
+
+
+		<ion-list no-lines padding-top *ngSwitchCase="'completed'">
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<ion-avatar item-start (click)="orderDetail()">
+					<img src="assets/imgs/delivered.png">
+				</ion-avatar>
+				<div class="contant">
+					<h2 class="d-flex">
+						<span class="text" (click)="orderDetail()">
+							Delivered
+							<small>
+								{{"order_no" | translate}} 22145052
+							</small>
+						</span>
+						<span class="end">
+							<button ion-button blok full padding-top class="btn delivered" padding-bottom>
+								Delivered
+							</button>
+						</span>
+					</h2>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"deliver_time" | translate}}
+							</small>
+							<strong>
+								<p>21 June 2020</p>
+								<span>01:00 pm</span>
+							</strong>
+						</span>
+						<span class="end text">
+							<small>
+								{{"payment" | translate}}
+							</small>
+							<strong>
+								<p>$ 78.00</p>
+								<span>Cash On Delivery</span>
+							</strong>
+						</span>
+					</h3>
+					<h3 class="d-flex" (click)="orderDetail(order)">
+						<span class="text">
+							<small>
+								{{"address" | translate}}
+							</small>
+							<strong>
+								B11 Old Ford Street, Workshop Tower..
+							</strong>
+						</span>
+					</h3>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+
+<div *ngIf="config.demoMode" class="buy-this-app-class">
+    <button ion-button class="button-size" (click)="buyThisApp()" round>
+        <ion-icon name="md-cart" class="text-white"></ion-icon> &nbsp;
+        {{'buy_this_app' | translate}}
+    </button>
+</div>

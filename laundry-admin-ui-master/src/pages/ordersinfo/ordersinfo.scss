@@ -1,0 +1,287 @@
+page-ordersinfo {
+	.header {
+		.toolbar {
+			align-items: flex-start;
+			padding-top: 10px;
+		}
+
+		.toolbar-title {
+			font-weight: 600 !important;
+			white-space: normal;
+			display: block !important;
+
+			span {
+				font-size: 1.4rem !important;
+				font-weight: 400 !important;
+				letter-spacing: 0;
+				color: darken($gray, 20%) !important;
+				display: block;
+			}
+		}
+
+		.details {
+			&.d-flex {
+				align-items: flex-start;
+				padding: 21px 21px;
+				padding-bottom: 20px;
+
+				.text {
+					width: 70%;
+				}
+
+				h2 {
+					font-size: 1.8rem;
+					font-weight: 600;
+					margin: 0;
+					width: 100%;
+					padding-bottom: 5px;
+
+					&.end {
+						max-width: 30%;
+						min-width: 30%;
+					}
+				}
+
+				p {
+					margin: 0;
+					font-size: 1.25rem;
+					font-weight: 400;
+					color: lighten($gray, 20%);
+				}
+			}
+		}
+
+		ion-segment {
+			ion-segment-button {
+				width: 100% !important;
+				color: lighten($gray, 30%) !important;
+				text-transform: none !important;
+				font-size: 1.8rem !important;
+				font-weight: 500 !important;
+				opacity: 1 !important;
+				padding: 0 0px !important;
+				position: relative;
+				min-height: 50px;
+
+				&.segment-activated {
+					color: $text-theme-color !important;
+					font-weight: 600 !important;
+
+					&::after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						left: 0;
+						margin: 0 auto;
+						width: 53px;
+						height: 4px;
+						border-radius: 50px;
+						background: $theme-color !important;
+					}
+				}
+			}
+		}
+	}
+
+	.list {
+		margin-bottom: 0;
+		margin-top: 6px;
+
+		ion-list-header {
+			background: lighten($bg-color, 2%);
+			margin-bottom: 0 !important;
+			padding: 0 15px !important;
+
+			.row {
+				.col {
+					padding: 0;
+
+					h3 {
+						font-size: 1.3rem;
+						color: lighten($gray, 20%);
+					}
+				}
+			}
+		}
+
+		.item {
+			padding: 0;
+			margin-bottom: 0px;
+			margin-top: 1px;
+			padding: 15px;
+			margin-bottom: 8px;
+
+			.item-inner {
+				padding: 0;
+			}
+
+			ion-label {
+				margin: 0;
+				white-space: normal;
+
+				ion-row {
+					.d-flex {
+						align-items: flex-start;
+					}
+
+					.col {
+						padding: 0;
+					}
+				}
+
+				h2 {
+					font-size: 1.45rem;
+					font-weight: 500;
+					margin: 0;
+					width: 100%;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+				}
+
+				h4 {
+					margin: 0;
+
+					small {
+						font-size: 1.25rem;
+						width: 50px;
+						margin-top: 10px;
+						color: lighten($gray, 20%);
+						font-weight: 400;
+					}
+				}
+
+				p {
+					margin: 0;
+					font-size: 1.25rem;
+					font-weight: 400;
+					color: lighten($gray, 20%);
+				}
+
+				.img-box {
+					width: 35px;
+					min-width: 35px;
+					height: 35px;
+					position: relative;
+					overflow: hidden;
+					border-radius: 50%;
+					margin-right: 10px;
+
+					img {
+						width: auto;
+						height: auto;
+						position: absolute;
+						right: -50% !important;
+						left: -50% !important;
+						bottom: 0;
+						top: 0;
+						margin: auto;
+					}
+				}
+			}
+
+			&.items { 
+
+				.row {
+					align-items: center;
+
+					.col {
+						padding: 5px 0px;
+
+						h3 {
+							color: $text-dark;
+							font-weight: 600;
+							font-size: 1.5rem;
+							letter-spacing: .5px;
+							margin: 0;
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap
+						}
+
+						h4 {
+							font-size: 1.25rem;
+							font-weight: 400;
+							color: lighten($gray, 20%);
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.total {
+		.row {
+			background: lighten($bg-color, 2%);
+			padding: 0 10px;
+
+			h5 {
+				margin: 0;
+				font-size: 1.5rem;
+				padding: 10px 0;
+			}
+		}
+	}
+
+	.button.btn {
+		margin: 0;
+		height: 50px;
+		font-size: 1.9rem;
+	}
+
+	.customer_info {
+		background: $white;
+
+		.list {
+			padding: 7px 0;
+			margin-bottom: 8px;
+
+			.item {
+				margin: 0;
+				padding: 10px 24px 15px 24px;
+
+				ion-label {
+					padding: 0 !important;
+
+					h2 {
+						font-size: 1.87rem;
+						font-weight: 600;
+						padding-bottom: 5px;
+					}
+
+					p {
+						font-size: 1.4rem;
+						color: lighten($gray, 5%);
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		background: $white;
+
+		.container {
+			padding: 9px 15px;
+
+			h2 {
+				margin: 0;
+				color: $text-dark;
+				font-size: 1.85rem;
+				font-weight: 700;
+				padding: 8px 0;
+
+				span {
+					color: $theme-color;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+}

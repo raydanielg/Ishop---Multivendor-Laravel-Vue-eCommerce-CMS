@@ -1,0 +1,38 @@
+page-tnc {
+	.heading {
+		color: $text-light;
+		font-size: 1.5rem;
+	}
+
+	.logo {
+		width: 160px;
+		margin: auto;
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	p {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: $text-dark;
+		line-height: 1.5;
+	}
+
+	.conditions {
+		border-top: 5px solid $bg-light;
+
+		p {
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+	}
+
+	h2 {
+		padding: 20px 0;
+		margin-bottom: 0;
+		font-size: 1.7rem;
+		font-weight: 500;
+		color: $text-dark;
+	}
+}

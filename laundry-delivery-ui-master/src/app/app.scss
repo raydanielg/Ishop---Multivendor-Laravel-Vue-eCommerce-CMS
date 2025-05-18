@@ -1,0 +1,505 @@
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+//@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-Italic.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-Italic.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-Medium.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-MediumItalic.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-MediumItalic.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-BoldItalic.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-BoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-Regular.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Google Sans";
+	src: url("../assets/font/GoogleSans-Bold.woff2") format("woff2"),
+		url("../assets/font/GoogleSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	font-family: "Google Sans";
+	font-weight: 400;
+}
+
+//all theme color
+$bg-light: #f5f5f5;
+$white: #ffffff;
+$black: #000000;
+$theme-color: #18c2ef;
+$bg-theme: $theme-color;
+$text-theme: #18c2ef;
+$text-light: #c0c0c0;
+$text-muted: #9c9c9c;
+$text-dark: #2e2e2e;
+$text-black: #000000;
+
+.bg-light {
+	background-color: $bg-light;
+}
+
+.scroll-content {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.center_img {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		&.crop_img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: -50% !important;
+			right: -50% !important;
+			margin: auto;
+		}
+
+	}
+}
+
+.button {
+	&.btn {
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		height: 45px;
+		box-shadow: none;
+		background: $theme-color;
+		text-transform: none;
+		color: $white;
+		letter-spacing: 0px;
+
+		&:hover:not(.disable-hover) {
+			background: $theme-color;
+		}
+
+		&[block] {
+			border-radius: 4px;
+		}
+
+		&[outline] {
+			color: $theme-color;
+			background: none;
+			font-weight: 500;
+			border: 1px solid $theme-color;
+
+			&:hover:not(.disable-hover) {
+				background: none;
+			}
+		}
+
+	}
+}
+
+.scroll-content {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.d-flex {
+	display: flex !important;
+	align-items: center;
+	width: 100%;
+
+	.end {
+		margin-left: auto;
+		margin-right: 0;
+		display: block;
+	}
+}
+
+//default form style
+.form {
+	.item {
+		padding-left: 0;
+		border-bottom: 1px solid #eeeeee !important;
+		box-shadow: none !important;
+
+		.item-inner {
+			border: none !important;
+			box-shadow: none !important;
+			padding: 0;
+			margin: 0 !important;
+
+			.text-input-wp {
+				border-color: transparent !important;
+				padding-left: 0 !important;
+				margin-left: 0 !important;
+			}
+
+			h5 {
+				margin: 0;
+				position: relative;
+				z-index: 9;
+				color: $text-theme;
+				line-height: 61px;
+				top: 10px;
+			}
+
+			.label {
+				font-size: 1.5rem;
+				font-weight: 300;
+				color: $text-light;
+			}
+
+			ion-input {
+				.text-input {
+					text-align: left !important;
+				}
+			}
+		}
+
+		ion-icon {
+			display: inline-block;
+			font-size: 1.2em !important;
+			margin-bottom: 0 !important;
+			margin-top: 30px !important;
+			margin-right: 0px !important;
+			min-height: 0;
+			color: $text-theme;
+			min-width: 35px;
+		}
+
+
+		&.item-input-has-focus {
+			.label {
+				color: $text-theme;
+			}
+		}
+	}
+}
+
+.header {
+	&::after {
+		display: none;
+	}
+
+	&.bg-transparent {
+		.toolbar-background {
+			background: transparent !important;
+		}
+	}
+
+	.toolbar {
+		.toolbar-background {
+			background-color: $white;
+			border: none !important;
+		}
+
+		.bar-button {
+			z-index: 999;
+			margin: 0;
+			padding: 0;
+			min-width: unset;
+			padding-left: 15px;
+
+			.button-inner {
+				ion-icon {
+					font-size: 2.5rem;
+					color: $theme-color;
+					padding: 0;
+
+					.back-button-text {
+						display: none !important;
+					}
+				}
+
+				.back-button-text {
+					display: none !important;
+				}
+			}
+		}
+
+		.title {
+			.toolbar-title {
+				font-size: 1.95rem;
+				font-weight: 700 !important;
+				text-align: justify !important;
+				color: $text-dark;
+				display: flex;
+				align-items: center;
+				text-transform: none;
+				letter-spacing: 0px;
+				padding: 0px 15px;
+
+				.end {
+					margin-left: auto !important;
+
+					img {
+						width: 22px;
+						margin: 0 10px;
+					}
+				}
+			}
+		}
+
+		&.toolbar-ios {
+			ion-title {
+				padding: 0 0px;
+				position: unset;
+			}
+
+			.back-button {
+				.button-inner {
+					.back-button-text {
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+ion-tabs {
+	.tabbar {
+		padding-bottom: 0 !important;
+		background: $white;
+		box-shadow: 0 6px 20px 16px rgba(0, 0, 0, 0.1);
+		max-height: 40px;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+//tab style
+.tab-button {
+	position: relative;
+	background: $white;
+
+	.tab-button-icon {
+		font-size: 20px;
+		color: $text-light !important;
+	}
+
+	&[aria-selected="true"] {
+		.tab-button-icon {
+			color: $text-theme !important;
+		}
+
+		&::after {
+			content: "";
+			background-color: $bg-theme;
+			height: 3px;
+			width: 60%;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			position: absolute;
+		}
+	}
+}
+
+.logo {
+	width: 128px;
+	margin: auto;
+	margin-bottom: 10px;
+	/* margin-top: 20px; */
+	display: block;
+}
+
+.fixed-bottom {
+	position: unset !important;
+}
+
+.footer-ios .toolbar-ios:first-child .toolbar-background-ios {
+	border-width: 0 !important;
+}
+
+.toolbar-background {
+	background-color: $white !important;
+	border-color: $white !important;
+	background: $white !important;
+}
+
+[dir="rtl"] body {
+	ion-label {
+		transform-origin: right top !important;
+	}
+
+	.header .toolbar .show-back-button + .toolbar-content {
+		margin-right: unset;
+		margin-left: auto;
+	}
+
+	[text-start] {
+		text-align: right !important;
+		// text-align: start !important;
+	}
+
+	[float-left] {
+		float: right !important;
+	}
+
+	.menu-inner {
+		right: 0;
+		left: auto;
+	}
+
+	.toolbar-ios ion-title {
+		padding: 0 16px 1px !important;
+	}
+
+	.toolbar-title {
+
+		//        padding-right: 30px !important;
+		.icon-box {
+			position: relative;
+			margin-left: unset;
+			margin-right: auto;
+		}
+	}
+
+	.form ion-item .text-input,
+	.form .item-inner .text-input {
+		text-align: right;
+	}
+
+	ion-header {
+		.toolbar-title.toolbar-title-md span {
+			left: -1px;
+			right: unset;
+		}
+
+		.back,
+		.back-button {
+			transform: rotate(180deg);
+		}
+	}
+
+	.menu-inner {
+		ion-header h2 ion-icon {
+			margin-right: auto;
+			margin-left: 0;
+			transform: rotate(180deg);
+		}
+
+		.menu-title button ion-label {
+			img {
+				margin-left: 2rem;
+				margin-right: 0rem;
+			}
+		}
+	}
+
+	.alert-md {
+		.alert-radio-label {
+			padding-right: 66px;
+		}
+
+		.alert-radio-icon {
+			position: absolute;
+			right: 28px;
+			top: 15px;
+		}
+	}
+
+	page-signin {
+		ion-header .toolbar-title span {
+			right: unset;
+			left: 20px;
+		}
+
+		.form ion-list ion-item .text-input,
+		.form ion-list .item-inner .text-input {
+			text-align: left !important;
+		}
+
+
+		input {
+			text-align: right;
+		}
+	}
+
+	page-pickup .order-list .item {
+		.d-flex .end {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+
+		ion-avatar {
+			width: 45px;
+			height: 45px;
+			margin-left: 10px;
+			margin-right: 5px;
+		}
+	}
+
+	page-earnings {
+		.item {
+			.payment-type {
+				text-align: left;
+			}
+
+			.earned {
+				text-align: left;
+			}
+		}
+	}
+
+	page-orderinfo {
+		.header .list .item {
+			padding-left: 4px;
+		}
+	}
+
+	.order-list .cloth_list .receipt .row .col p strong {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	page-contact .bg-light .list .item {
+		ion-label {
+			margin-right: 16px;
+		}
+	}
+
+	page-managelanguage .list .item {
+		padding: 17px 19px 17px 12px;
+
+		.label ion-icon {
+			margin-right: auto;
+			margin-left: 0;
+		}
+	}
+}

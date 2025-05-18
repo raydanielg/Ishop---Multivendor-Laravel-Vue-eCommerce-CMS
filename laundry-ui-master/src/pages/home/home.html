@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title><strong>{{'Quick' | translate}}</strong>{{'Wash' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+            <img [src]="slide.image" class="slide-image" />
+            <div class="banner-text">
+                <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+                <button ion-button outline item-end icon-end clear small>
+                  {{'View_all_offiers' | translate}}                    
+                  <ion-icon name="md-arrow-forward"></ion-icon>
+                </button>
+            </div>
+        </ion-slide>
+    </ion-slides>
+    <p padding-left padding-right class="heading">Services</p>
+    <ion-scroll scrollX style="height:165px;white-space: nowrap;">
+        <div class="scroll-item" *ngFor="let service of services" (click)="selectclothes()">
+            <div class="item-box">
+                <img [src]="service.image" style="width: 90px;">
+                <h5 [innerHTML]="service.title"></h5>
+                <p [innerHTML]="service.small"></p>
+            </div>
+        </div>
+    </ion-scroll>
+
+    <p padding-left padding-right class="heading">{{'Your_Active_Order' | translate}}<span>{{'Past_Orders' | translate}}</span></p>
+    <div padding-left padding-right class="order-list">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/confirmed.png">
+                </ion-avatar>
+                <h2>{{'Order_No' | translate}}: 22145052</h2>
+                <p>{{'Order_Confirmed' | translate}}</p>
+                <ion-note item-end>$256
+                    <small>25 June, 2018</small></ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/pickedup.png">
+                </ion-avatar>
+                <h2>{{'Order_No' | translate}}: 22145052</h2>
+                <p>{{'Order_Picked_up' | translate}}</p>
+                <ion-note item-end>$256
+                    <small>25 June, 2018</small></ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/inporcess.png">
+                </ion-avatar>
+                <h2>{{'Order_No' | translate}}: 22145052</h2>
+                <p>{{'Order_Inporcess' | translate}}</p>
+                <ion-note item-end>$256
+                    <small>25 June, 2018</small></ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/dispatched.png">
+                </ion-avatar>
+                <h2>{{'Order_No' | translate}}: 22145052</h2>
+                <p>{{'Order_Dispatched' | translate}}</p>
+                <ion-note item-end>$256
+                    <small>25 June, 2018</small></ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/delivered.png">
+                </ion-avatar>
+                <h2>{{'Order_No' | translate}}: 22145052</h2>
+                <p>{{'Order_Delivered' | translate}}</p>
+                <ion-note item-end>$256
+                    <small>25 June, 2018</small></ion-note>
+            </ion-item>
+
+        </ion-list>
+    </div>
+</ion-content>
+<div *ngIf="config.demoMode" class="buy-this-app-class">
+    <button ion-button class="button-size" (click)="buyThisApp()" round>
+        <ion-icon name="md-cart" class="text-white"></ion-icon> &nbsp;
+        {{'buy_this_app' | translate}}
+    </button>
+</div>

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'My_Profile' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="profile-img"><img src="assets/imgs/face.png">
+        <ion-icon name="md-camera" item-start></ion-icon>
+    </div>
+
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-icon name="md-person" item-start></ion-icon>
+            <ion-label floating>{{'Enter_Full_Name' | translate}}</ion-label>
+            <ion-input type="text" value="Sam Smith"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-mail" item-start></ion-icon>
+            <ion-label floating>{{'Email_Address' | translate}}</ion-label>
+            <ion-input type="emil" value="samsmith@gmail.com"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-phone-portrait" item-start></ion-icon>
+            <ion-label floating>{{'Phone_Number' | translate}}</ion-label>
+            <ion-input type="text" value="+1 987 654 3210"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full>{{'Register_Now' | translate}}</button>
+    <p text-center>{{'Change_Password' | translate}}</p>
+</ion-content>

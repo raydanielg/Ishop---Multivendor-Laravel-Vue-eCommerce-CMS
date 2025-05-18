@@ -1,0 +1,111 @@
+page-account {
+	.order-head {
+		padding: 20px 16px 25px;
+		background-color: $white;
+		border-bottom: 5px solid $bg-light;
+
+		.row {
+			align-items: center;
+			margin: 0 -5px;
+		}
+
+		.col {
+			.img_box {
+				width: 95px;
+				height: 95px;
+				border-radius: 50%;
+			}
+
+			p {
+				font-weight: 900;
+				color: $text-dark;
+				font-size: 2rem;
+				margin: 0;
+
+				span {
+					display: block;
+					color: $text-light;
+					font-size: 1.4rem;
+					font-weight: 500;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+
+	.about {
+		font-size: 1rem;
+		font-weight: 500;
+		color: $text-muted;
+	}
+
+	.list {
+		margin-bottom: 10px !important;
+		background: $white;
+		overflow: hidden;
+
+		.item:first-child {
+			padding-top: 16px;
+		}
+
+		.item:last-child {
+			padding-bottom: 16px;
+		}
+	}
+
+	.item {
+		padding-top: 3px;
+		padding-bottom: 6px;
+
+		ion-icon {
+			font-size: 1.8rem;
+			color: $text-theme;
+			line-height: 28px;
+		}
+
+		.item-inner {
+			margin-left: 5px !important;
+
+			.label {
+				font-size: 1.7rem;
+				font-weight: 700;
+				color: $text-dark; 
+			}
+		}
+
+		ion-icon {
+			&[item-start] {
+				min-width: 40px;
+			}
+		}
+	}
+
+	.logo {
+		width: 135px;
+		padding: 0 !important;
+	}
+	.div-logo{
+        display: flex;
+        align-items: flex-end;
+        width: fit-content;
+      }
+      img.img-logo {
+        width: 140px;
+      }
+      h4.text-white-dev {
+        margin: inherit;
+      }
+      .footer-md::before {
+        background-image: none;
+       
+      }
+      .item-branding-class {
+        background: none;
+        text-align: -webkit-center;
+        // padding: 0px 10px 10px 0px;
+      }
+      .footer-class{
+        background: none;
+        padding-bottom: 5%;
+      }
+}

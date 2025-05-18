@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'Enter_OTP' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <p text-center>{{'Let_us_know_One_time_password' | translate}}<br>{{'well_send_you_OTP_on_your_registered' | translate}}
+        <br>{{'email_address_or_phone_number' | translate}}</p>
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-input type="number" placeholder="Enter One Time Password" text-center></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="signin()">{{'Submit' | translate}}</button>
+</ion-content>

@@ -1,0 +1,159 @@
+page-home {
+	.header {
+		.toolbar-title {
+			font-weight: 600 !important;
+		}
+
+		ion-segment {
+			ion-segment-button {
+				width: 100% !important;
+				color: lighten($gray, 30%) !important;
+				text-transform: none !important;
+				font-size: 2.1rem !important;
+				font-weight: 500 !important;
+				opacity: 1 !important;
+				padding: 0 10px !important;
+
+				&.segment-activated {
+					color: $black !important;
+					font-weight: 600 !important;
+				}
+			}
+		}
+	}
+
+	.graph_tab {
+		padding-bottom: 25px;
+		margin-bottom: 10px;
+border-bottom: 10px solid $bg-color;
+		ion-segment {
+			max-width: 83%;
+			margin: 0 auto;
+			background: darken($bg-color, 3%) !important;
+			border-radius: 5px;
+
+			ion-segment-button {
+				width: 100% !important;
+				color: darken($gray, 10%) !important;
+				text-transform: none !important;
+				font-size: 1.47rem !important;
+				font-weight: 400 !important;
+				opacity: 1 !important;
+				padding: 0 !important;
+				background: darken($bg-color, 3%) !important;
+				border-radius: 5px;
+
+				&.segment-activated {
+					color: $white !important;
+					background: $theme-color !important;
+				}
+			}
+		}
+
+		.graph {
+			width: 83%;
+			margin: 0 auto;
+			padding-top: 31px;
+
+			.graph_steck {
+				margin: 0 auto;
+				display: block;
+				width: 100%;
+				padding-bottom: 30px;
+
+				h2 {
+					position: relative;
+					overflow: hidden;
+					display: block;
+					width: 16px;
+					height: 200px;
+					margin: 0 auto;
+
+					&.bg-color {
+						background: darken($bg-color, 3%) !important;
+					}
+
+					span {
+						position: absolute;
+						width: 100%;
+						bottom: 0;
+						left: 0;
+					}
+				}
+
+				p {
+					margin: 0;
+					font-size: 1.1rem;
+					font-weight: 500;
+					padding-top: 10px;
+				}
+			}
+		}
+
+		.button.btn {
+			width: 83%;
+			margin: 0 auto;
+			border-radius: 5px;
+		}
+	}
+
+	.footer {
+		.row {
+			padding-top: 7px;
+			padding-bottom: 15px;
+
+			.col {
+				padding: 0 20px;
+
+				h2 {
+					margin: 0;
+					font-size: 3.6rem;
+					font-weight: 400;
+					padding-top: 8px;
+					color: $text-dark;
+				}
+
+				h3 {
+					font-size: 1.55rem;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					margin: 0;
+				}
+
+				p {
+					margin: 0;
+					font-size: 1.6rem;
+					font-weight: 500;
+					color: #5ec3c9;
+				}
+
+				&.categorie-created {
+					p {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width:320px) {
+		.footer .row .col {
+			padding: 0 10px;
+		}
+	}
+	.buy-this-app-class {
+		position: fixed;
+		right: 0px;
+		bottom: 100px;
+		z-index: 99;
+		background: transparent;
+		width: 100%;
+		text-align: end;
+	  }
+	  .button-size{
+		height: 40px;
+		margin-right: 25px !important;
+		margin-left: 25px !important;
+		background-color: #f8563a;
+	  }
+}

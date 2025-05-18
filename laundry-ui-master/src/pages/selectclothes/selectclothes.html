@@ -1,0 +1,126 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'Select_Clothes' | translate}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border-top class="select-tab">
+        <ion-segment [(ngModel)]="clothes">
+            <ion-segment-button value="man">
+                {{'Man' | translate}}
+                <ion-badge item-end class="bg-theme">6</ion-badge>
+            </ion-segment-button>
+            <ion-segment-button value="woman">
+                {{'Woman' | translate}}
+                <ion-badge item-end class="bg-theme">2</ion-badge>
+            </ion-segment-button>
+            <ion-segment-button value="kids">
+                {{'Kids' | translate}}
+                <ion-badge item-end class="bg-theme d-none">0</ion-badge>
+            </ion-segment-button>
+            <ion-segment-button value="other">
+                {{'Other' | translate}}
+                <ion-badge item-end class="bg-theme d-none">0</ion-badge>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div [ngSwitch]="clothes" style="margin-top: 8px;" class="cloth-list">
+        <ion-list *ngSwitchCase="'man'" no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/t-shirt.jpg">
+                </ion-avatar>
+                <ion-label>
+                    <h2>T-shirt</h2>
+                    <ion-select [(ngModel)]="washtype" class="select-wash" okText="Done" multiple="true">
+                        <ion-option value="wo">Wash Only <span>$10</span></ion-option>
+                        <ion-option value="io">Iron Only <span>$8</span></ion-option>
+                        <ion-option value="dc">Dry Clean <span>$16</span></ion-option>
+                    </ion-select>
+                </ion-label>
+                <ion-note item-end class="price">$10</ion-note>
+                <ion-note item-end>
+                    <ion-icon name="md-remove-circle"></ion-icon>
+                    <span>1</span>
+                    <ion-icon name="md-add-circle"></ion-icon>
+                </ion-note>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'woman'" no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/t-shirt.jpg">
+                </ion-avatar>
+                <ion-label>
+                    <h2>T-Shirt</h2>
+                    <ion-select [(ngModel)]="washtype" okText="Done" multiple="true">
+                        <ion-option value="wo">Wash Only <span>$10</span></ion-option>
+                        <ion-option value="io">Iron Only <span>$8</span></ion-option>
+                        <ion-option value="dc">Dry Clean <span>$16</span></ion-option>
+                    </ion-select>
+                </ion-label>
+                <ion-note item-end class="price">$10</ion-note>
+                <ion-note item-end>
+                    <ion-icon name="md-remove-circle"></ion-icon>
+                    <span>1</span>
+                    <ion-icon name="md-add-circle"></ion-icon>
+                </ion-note>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'kids'" no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/t-shirt.jpg">
+                </ion-avatar>
+                <ion-label>
+                    <h2>T-shirt</h2>
+                    <ion-select [(ngModel)]="washtype" okText="Done" multiple="true">
+                        <ion-option value="wo">Wash Only <span>$10</span></ion-option>
+                        <ion-option value="io">Iron Only <span>$8</span></ion-option>
+                        <ion-option value="dc">Dry Clean <span>$16</span></ion-option>
+                    </ion-select>
+                </ion-label>
+                <ion-note item-end class="price">$10</ion-note>
+                <ion-note item-end>
+                    <ion-icon name="md-remove-circle"></ion-icon>
+                    <span>1</span>
+                    <ion-icon name="md-add-circle"></ion-icon>
+                </ion-note>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'other'" no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/imgs/t-shirt.jpg">
+                </ion-avatar>
+                <ion-label>
+                    <h2>T-shirt</h2>
+                    <ion-select [(ngModel)]="washtype" okText="Done" multiple="true">
+                        <ion-option value="wo">Wash Only <span>$10</span></ion-option>
+                        <ion-option value="io">Iron Only <span>$8</span></ion-option>
+                        <ion-option value="dc">Dry Clean <span>$16</span></ion-option>
+                    </ion-select>
+                </ion-label>
+                <ion-note item-end class="price">$10</ion-note>
+                <ion-note item-end>
+                    <ion-icon name="md-remove-circle"></ion-icon>
+                    <span>1</span>
+                    <ion-icon name="md-add-circle"></ion-icon>
+                </ion-note>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div class="fixed-bootom" (click)="orderconfirmed()">
+        <ion-row>
+            <ion-col class="cost">{{'Total' | translate}} $75.00 </ion-col>
+            <ion-col class="small">8 {{'Items_added' | translate}}</ion-col>
+            <ion-col class="next">{{'Next' | translate}}
+                <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{"Account" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div class="order-head" (click)="profile()">
+        <ion-row>
+            <ion-col col-4><img src="assets/imgs/face.png"></ion-col>
+            <ion-col>
+                <p>Sam Smith<span>{{'View_profile' | translate}}</span></p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-list no-lines>
+        <ion-item (click)="myorders()">
+            <ion-icon name="md-list-box" item-start></ion-icon>
+           {{'My_Orders' | translate}}
+        </ion-item>
+        <ion-item (click)="addaddress()">
+            <ion-icon name="md-pin" item-start></ion-icon>
+            {{'My_address' | translate}}
+        </ion-item>
+        <ion-item (click)="about()">
+            <ion-icon name="md-clipboard" item-start></ion-icon>
+            {{'About_us' | translate}}
+        </ion-item>
+        <ion-item (click)="contact()">
+            <ion-icon name="md-mail" item-start></ion-icon>
+            {{'Contact_us' | translate}}
+        </ion-item>
+        <ion-item (click)="tnc()">
+            <ion-icon name="md-document" item-start></ion-icon>
+            {{'Terms_Services' | translate}}
+        </ion-item>
+        <ion-item (click)="chooseLanguage()">
+            <ion-icon name="md-globe" item-start></ion-icon>
+            {{'change_language' | translate}}
+        </ion-item>
+        <ion-item (click)="signin()">
+            <ion-icon name="md-open" item-start></ion-icon>
+            {{'Logout' | translate}}
+        </ion-item>
+    </ion-list>
+    <p text-center class="about">Opus labs Version 2.0.101</p>
+</ion-content>
+<ion-footer *ngIf="config.demoMode" class="footer-class">
+    <ion-item class="item-branding-class" (click)="developedBy()" no-lines>
+        <div class="div-logo">
+            <h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+            <img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+        </div>
+    </ion-item>
+</ion-footer>

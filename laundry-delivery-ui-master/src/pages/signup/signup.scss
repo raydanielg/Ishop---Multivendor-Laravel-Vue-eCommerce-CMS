@@ -1,0 +1,73 @@
+page-signup {
+	.header {
+		.toolbar .toolbar-content {
+			position: absolute;
+			width: 100%;
+
+			.title .toolbar-title {
+				display: block;
+				text-align: center !important;
+				font-size: 2.2rem !important;
+				font-weight: 500 !important;
+			}
+		}
+	}
+
+	.cam-icon {
+		width: 75px;
+		height: 75px;
+		font-size: 2.6rem;
+		background-color: $bg-light;
+		text-align: center;
+		line-height: 75px;
+		color: $white;
+		border-radius: 50%;
+		display: block;
+		margin: auto;
+		margin-bottom: 20px;
+	} 
+
+	.form {
+		margin-bottom: 35px;
+
+		.item .item-inner {
+			//            margin-left: 0px !important;
+		}
+
+		.select-icon {
+
+			//            display: none;
+			.select-icon-inner {
+				color: $black;
+				display: none;
+			}
+		}
+	}
+
+	.profile_img {
+		background: lighten($text-light, 14%);
+		width: 85px;
+		height: 85px;
+		margin: 25px auto;
+		border-radius: 50%;
+
+		ion-icon {
+			color: $white;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: 2.7rem;
+			line-height: 85px;
+		}
+	}
+
+	ion-footer {
+		padding: 16px 16px;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}

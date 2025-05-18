@@ -1,0 +1,152 @@
+page-earnings {
+	.header {
+		.banner {
+			.item {
+				ion-label {
+					font-size: 1.8rem !important;
+					font-weight: 600 !important;
+					color: #424242;
+				}
+
+				.item-inner {
+					border-bottom: none !important;
+
+					.select {
+						//                        display: block;
+						padding: 0;
+
+						.select-text {
+							padding-right: 20px;
+							font-size: 1.65rem;
+							font-weight: 500;
+							letter-spacing: 1px;
+							font-size: 1.8rem;
+							font-weight: 500;
+						}
+
+						margin: 0 auto;
+
+						.select-icon {
+							width: 18px;
+							top: 3px;
+
+							.select-icon-inner {
+								color: $text-theme;
+							}
+						}
+					}
+				}
+
+				&.times {
+					.select {
+						.select-text {
+							color: $text-theme;
+							padding-right: 5px;
+						}
+					}
+
+					padding-bottom: 10px;
+				}
+			}
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 4.5rem;
+			font-weight: 900;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+	}
+
+	.list {
+		margin-top: 8px;
+
+		h3 {
+			&.heading {
+				padding-left: 16px;
+				padding-right: 16px;
+				font-size: 1.5rem;
+				padding-bottom: 5px;
+				color: $text-light;
+			}
+		}
+
+		.item {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 4px;
+
+			.label {
+				margin: 1px 8px 5px 0;
+			}
+
+			h2 {
+				font-size: 1.4rem;
+				font-weight: 500;
+				color: $text-dark;
+				margin-bottom: 5px;
+			}
+
+			p {
+				font-size: 1.3rem;
+				font-weight: 500;
+				color: $text-light;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: normal;
+			}
+
+			ion-note {
+				font-size: 0.95rem;
+				color: $text-light;
+				margin-top: -20px;
+				text-align: right;
+			}
+
+			.payment-type {
+				text-align: right;
+			}
+
+			.earned {
+				text-align: right;
+
+				h2 {
+					color: $text-theme;
+				}
+			}
+		}
+	}
+
+	.empty-view {
+		width: 200px;
+		margin: auto;
+		height: 200px;
+		top: 10%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10%;
+
+		img {
+			width: 100px;
+			margin: auto;
+		}
+
+		span {
+			display: block;
+			text-align: center;
+		}
+
+		button {
+			margin-top: 50px;
+
+			span {
+				display: unset !important;
+			}
+		}
+	}
+}
